@@ -1,0 +1,18 @@
+{% extends 'base_templates.html' %}
+
+{% block title %}
+Delete Car
+{% endblock %}
+
+{% block content %}
+<h1>are you gay?</h1>
+<form methodd="CAR" action="{% url 'car-delete-view' CarRent.id %}">
+    {% csrf_token %}
+    <button type="submit">Yes</button>
+</form>
+
+<form action="{% url 'car-update-view' CarRent.id %}">
+    <button type="submit">Back</button>
+</form>
+
+{% endblock %}

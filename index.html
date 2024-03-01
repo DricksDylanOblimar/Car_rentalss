@@ -1,0 +1,44 @@
+{% comment %} 
+{% extends 'base_template.html' %}
+
+{% block title %}Home - My Django App{% endblock %}
+
+{% block content %}
+    <section>
+        <h2>Welcome to Oblimar's' Page</h2>
+        <p>Home page of this django application.</p>
+    </section>
+{% endblock %} {% endcomment %}
+
+{% extends 'base_templates.html' %}
+
+{% block title %}
+Car Rental
+{% endblock %}
+
+{% block content %}
+<h1>Dell Rental Cars</h1>
+{% for CarRent in cars_list %}
+<div><p>Model: {{ CarRent.Model }}</p></div>
+<div><p>Brand: {{ CarRent.Brand }}</p></div>
+<div><p>Fueltype: {{ CarRent.Fueltype }}</p></div>
+<div><p>Dailyrate: {{ CarRent.Dailyrate }}</p></div>
+{% endfor %}
+<form action="{% url 'car-create-view' %}">
+    <button type="submit">Creat Form</button>
+</form>
+{% endblock %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

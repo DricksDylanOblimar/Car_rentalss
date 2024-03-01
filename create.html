@@ -1,0 +1,62 @@
+{% extends 'base_templates.html' %}
+{% block title %}
+Create Car Form
+{% endblock %}
+
+{% block content %}
+<h1>Car Form</h1>
+<form method='Car' action="{% url 'car-create-view' %}">
+    {% csrf_token %}
+    {{ form }}
+    <button type='submit'>Submit</button>
+</form>
+
+<form action="{% url 'list-view-car' %}">
+    <button type="submit">Back</button>
+</form>
+
+
+{% endblock %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

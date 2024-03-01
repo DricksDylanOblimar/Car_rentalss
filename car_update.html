@@ -1,0 +1,17 @@
+{% extends 'base_templates.html' %}
+
+{% block title %}
+Update Car
+{% endblock %}
+
+{% block content %}
+<h1>Update Cars</h1>
+<form method="Car" action="{% url 'car-update-view' CarRent.id %}">
+    {% csrf_token %}
+    {{ form }}
+    <button type="submit">Update</button>
+</form>
+<form method="Car" action="{% url 'car-delete-view' CarRent.id %}">
+    <button type="submit">Delete</button>
+</form>
+{% endblock %}
